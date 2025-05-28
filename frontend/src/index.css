@@ -1,0 +1,155 @@
+/* Reset & Box Sizing */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Typography */
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* Center Content */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 420px;
+  padding: 30px 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.container > h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Form */
+.container > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+label {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+/* Input Group */
+.container div {
+  width: 100%;
+}
+
+/* Fix Typo: '.containter' → '.container' */
+.container input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.2s;
+}
+
+.container input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Expenses Table Styles */
+.expense-list {
+  margin-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+}
+
+.expense-item:hover {
+  box-shadow: 0 4px 16px rgba(0,123,255,0.08);
+}
+
+.expense-description {
+  flex: 2;
+  font-size: 17px;
+  color: #333;
+}
+
+.expense-amount {
+  flex: 1;
+  font-size: 16px;
+  color: #007bff;
+  font-weight: 600;
+  text-align: right;
+}
+
+.delete-button {
+  background: #ff4d4f;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-right: 16px;
+  transition: background 0.2s;
+}
+
+.delete-button:hover {
+  background: #d9363e;
+}
