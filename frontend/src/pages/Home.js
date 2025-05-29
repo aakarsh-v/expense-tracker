@@ -39,7 +39,7 @@ function Home() {
 
   const fetchExpenses = async () => {
     try {
-      const url = "http://localhost:3001/expenses";
+      const url = "https://expense-tracker-sduo.onrender.com/expenses";
       const headers = {
         headers: {
           'Authorization': localStorage.getItem('token')
@@ -59,7 +59,7 @@ function Home() {
 
   const addExpense = async (data) => {
     try {
-      const url = "http://localhost:3001/expenses";
+      const url = "https://expense-tracker-sduo.onrender.com/expenses";
       const headers = {
         headers: {
           'Authorization': localStorage.getItem('token'),
@@ -87,7 +87,7 @@ function Home() {
 
   const handleDelete = async (expenseId) => {
     try {
-      const url = `http://localhost:3001/expenses/${expenseId}`;
+      const url = `https://expense-tracker-sduo.onrender.com/expenses/${expenseId}`;
       const headers = {
         headers: {
           'Authorization': localStorage.getItem('token'),

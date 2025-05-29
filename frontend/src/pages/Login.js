@@ -28,7 +28,7 @@ function Login() {
       return handleError('Please fill all the fields');
     }
     try {
-      const url = "http://localhost:3001/auth/login"
+      const url = "https://expense-tracker-sduo.onrender.com/auth/login"
       const response = await fetch(url, {
         method: 'POST',
         headers: {
