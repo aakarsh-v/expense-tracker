@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
+import { handleError } from '../utils';
 
-const ExpenseTrackerForm = () => {
+const ExpenseTrackerForm = ({addExpense}) => {
 
     const [expenseInfo, setExpenseInfo] = useState({ text: '', amount: ''});
 
@@ -13,14 +14,25 @@ const ExpenseTrackerForm = () => {
   }
 
 
-  const handleExpense = () => {
+  const handleExpense = (e) => {
+    e.preventDefault();
+    console.log(expenseInfo);
+    const {text, amount} = expenseInfo;
+    if(!text || !amount){
+        handleError('All fields are required')
+        return;
+    }
 
+    setTimeout(() => {
+        setExpenseInfo({ text: '', amount: ''})
+    }, 1000)
+    addExpense(expenseInfo);
   }
 
-  
+
   return (
     <div className='container'>
-      <h1>Expenses</h1>
+      <h1>Expense Tracker</h1>
       <form onSubmit={handleExpense}>
         <div>
           <label htmlFor='email'>Expense Description</label>
