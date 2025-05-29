@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
@@ -8,14 +9,11 @@ import { ToastContainer } from 'react-toastify';
 import { useState } from 'react';
 import RefreshHandler from './RefreshHandler';
 
-
 function App() {
-
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const PrivateRoute = ({element}) => {
     return isAuthenticated ? element : <Navigate to ="/login" />
   }
-
 
   return (
     <div className="App">
